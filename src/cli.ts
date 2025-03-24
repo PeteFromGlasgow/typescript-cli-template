@@ -1,10 +1,16 @@
 import { Command } from 'commander'
 import { getHelloWorld } from './index.js'
 
-async function getProgram(output: (i: string | Buffer) => void) {
-  const program = new Command()
+// Helper function to check if we're in Node.js environment
+function isNode(): boolean {
+  return typeof globalThis.process === 'object' && globalThis.process.versions?.node
+}
 
-  const helloWorld = getHelloWorld(output)
+async function getProgram() {
+  if (!isNode()) return null
+  
+  const program = new Command()
+  const helloWorld = getHelloWorld(console.log)
 
   program
     .command('hello-world <name>')
