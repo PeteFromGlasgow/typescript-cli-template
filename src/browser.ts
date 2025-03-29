@@ -6,7 +6,4 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   
   const helloWorld = getHelloWorld(output)
-  
-  // Example usage:
-  helloWorld('Browser')
 })
