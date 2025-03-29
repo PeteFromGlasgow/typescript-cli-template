@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { getHelloWorld } from '../../src/index.js'
+import { getHelloWorld } from '../src/index.js'
 
 describe('helloWorld', () => {
   it('Should return "Hello Ben!" when given "Ben" as an argument', async () => {

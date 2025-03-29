@@ -3,4 +3,3 @@ export function getHelloWorld(output: (message: string) => void) {
     output(`Hello ${name}!`)
   }
 }
-

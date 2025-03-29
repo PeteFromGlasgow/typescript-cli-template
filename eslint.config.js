@@ -12,10 +12,11 @@ export default [
     indent: 2,
     semi: false,
     jsx: true,
+    commaDangle: 'never'
   }),
   {
     rules: {
-      '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
-    },
-  },
+      '@stylistic/quotes': ['error', 'single', { avoidEscape: true }]
+    }
+  }
 ]

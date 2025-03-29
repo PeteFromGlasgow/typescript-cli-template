@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getProgram } from '../../src/cli.js'
+import { getProgram } from '../src/cli.js'
 
 describe('Command hello-world <name>', () => {
   it('Should return "Hello George!" when given "George" as an argument', async () => {

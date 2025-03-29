@@ -1,15 +1,14 @@
 import { Command } from 'commander'
-import { getHelloWorld } from './index.js'
+import { getHelloWorld } from '@typescript-cli-template/core'
 
-async function getProgram() {
-  
+async function getProgram(output: (out: unknown) => void) {
   const program = new Command()
-  const helloWorld = getHelloWorld(console.log)
+  const helloWorld = getHelloWorld(output)
 
   program
     .command('hello-world <name>')
     .action(name => helloWorld(name))
-    
+
   return program
 }
 
