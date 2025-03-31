@@ -4,10 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsx src/browser.ts",
-    "start": "tsx src/app.ts",
-    "browser": "serve dist/browser",
+    "build": "pnpm run -r build",
     "lint": "eslint",
+    "lint:fix": "eslint --fix",
     "test": "pnpm run -r test"
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",
