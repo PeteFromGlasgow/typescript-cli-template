@@ -2,12 +2,16 @@
   "name": "@typescript-cli-template/cli",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/cli.js",
   "type": "module",
   "scripts": {
+    "build": "tsc",
     "test": "vitest --run"
   },
   "keywords": [],
+  "bin": {
+    "ts-cli": "dist/cli.js"
+  },
   "dependencies": {
     "@typescript-cli-template/core": "workspace:*",
     "commander": "^13.1.0"
