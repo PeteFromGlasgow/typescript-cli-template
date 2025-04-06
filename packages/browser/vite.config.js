@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   build: {
     outDir: 'browser',
-    
+
     sourcemap: true,
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),

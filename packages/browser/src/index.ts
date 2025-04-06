@@ -5,7 +5,7 @@ export function bindField(fieldId: string, targetId: string) {
   const target = document.getElementById(targetId)
 
   if (field && target) {
-    const sayHello = getHelloWorld((name) => target.innerHTML = name)
-    field.addEventListener('keyup', event => sayHello((event.target as any).value))
+    const sayHello = getHelloWorld(name => target.innerHTML = name)
+    field.addEventListener('keyup', event => sayHello((event.target! as { value: string }).value))
   }
 }

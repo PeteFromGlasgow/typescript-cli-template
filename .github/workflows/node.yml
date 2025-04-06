@@ -29,5 +29,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - run: pnpm -r install
+    - run: cd packages/browser && pnpm exec playwright install
+    - run: pnpm lint
     - run: pnpm -r test
+    
 
