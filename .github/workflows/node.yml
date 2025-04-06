@@ -8,7 +8,7 @@ jobs:
   on:
     push:
       paths:
-        - 'packages/cli/**'
+        - packages/cli/**
   steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v4
