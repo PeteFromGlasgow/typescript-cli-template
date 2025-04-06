@@ -1,8 +1,24 @@
-name: Node.js CI
+name: PNPM Recursive Build
 
 on: [push]
 
 jobs:
+  build-cli-docker-head:
+    runs-on: ubuntu-latest
+  on:
+    push:
+      paths:
+        - 'packages/cli/**'
+  steps:
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v4
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Build and push
+      uses: docker/build-push-action@v6
+      with:
+        file: packages/cli/Dockerfile
+
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -16,7 +32,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-    - run: pnpm install
-    - run: pnpm run lint
-    - run: pnpm test
+    - run: pnpm -r install
+    - run: pnpm -r test
 
