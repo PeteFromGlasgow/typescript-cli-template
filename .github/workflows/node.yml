@@ -1,20 +1,8 @@
-name: PNPM Recursive Build
+name: PNPM Recursive Build & Test
 
 on: [push]
 
 jobs:
-  build-cli-docker-head:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-      - name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          file: packages/cli/Dockerfile
-
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -32,5 +20,22 @@ jobs:
     - run: cd packages/browser && pnpm exec playwright install
     - run: pnpm lint
     - run: pnpm -r test
-    
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        browser: [chromium, firefox, webkit]
+    steps:
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v4
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    - run: pnpm -r install ${{ matrix.browser }}
+    - run: cd packages/browser && pnpm exec playwright install
+    - run: pnpm test -- --browser=${{ matrix.browser }} --headed 
 
