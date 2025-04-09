@@ -1,8 +1,27 @@
 # Typescript CLI Base
 
-This is a simple, functionally styled Typescript API base.
+This is a powerful, multi package Typescript project base which has examples for a CLI, Browser and library.
 
 ## Features
 
-* Testing with coverage & watch support (using Vitest)
-* Linting & Style (using ESLint)
+* Node Library, CLI and Browser script examples
+* Unit testing with examples
+* Linting & Style (using ESLint & Stylistic)
+* Docker Build for CLI application
+* Git pre-commit hooks using husky
+*
+
+## Usage
+
+This project uses `pnpm` to support multiple packages in the same repository.
+
+### Setup
+
+```bash
+# Enable Corepack
+corepack Enable
+
+# Install all packages recursively
+pnpm install -r
+```
+
