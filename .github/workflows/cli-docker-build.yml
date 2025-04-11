@@ -1,5 +1,5 @@
 name: Docker Build
-
+// AI! Probably worth adding eslint.config.js to this to. Also is there any way to only make certain jobs run on main/master like the build-cli-docker-head command below?
 on:
   push:
     paths:
