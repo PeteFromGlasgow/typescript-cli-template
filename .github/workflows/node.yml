@@ -35,6 +35,6 @@ jobs:
         node-version: "22"
         cache: 'pnpm'
     - run: pnpm -r install
-    - run: cd packages/browser && pnpm exec playwright install ${{ matrix.browser }}
+    - run: cd packages/browser && pnpm exec playwright install ${{ matrix.browser }} && pnpm exec playwright install-deps ${{ matrix.browser }}
     - run: cd packages/browser && pnpm exec vitest --run --browser=${{ matrix.browser }}
 
