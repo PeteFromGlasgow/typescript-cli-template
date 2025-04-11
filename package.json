@@ -7,7 +7,7 @@
     "build": "pnpm run -r build",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "test": "pnpm run -r test",
+    "test": "pnpm -r --filter=!browser t",
     "prepare": "husky"
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",
