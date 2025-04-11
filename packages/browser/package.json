@@ -7,7 +7,7 @@
   "scripts": {
     "build": "vite build",
     "lint": "eslint",
-    "test": "vitest --run"
+    "test": "vitest --run --browser=chromium"
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",
   "license": "ISC",
