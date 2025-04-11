@@ -1,12 +1,12 @@
 name: Docker Build
 
-// AI! could you add the Github Action file to this
 on:
   push:
     paths:
       - 'package.json'
       - 'packages/cli/**'
       - 'eslint.config.js'
+      - '.github/workflows/cli-docker-build.yml'
 
 jobs:
   build-cli-docker-head:
