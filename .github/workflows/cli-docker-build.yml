@@ -8,7 +8,6 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/cli-docker-build.yml'
 
-// AI! Can you make the trivy scan run before pushing the image?
 jobs:
   build-cli-docker-head:
     # Only run this job on pushes to main or master branch
@@ -31,7 +30,9 @@ jobs:
         with:
           context: .
           file: packages/cli/Dockerfile
-          push: true
+          # Do not push yet, load image into local Docker daemon
+          push: false
+          load: true
           tags: ghcr.io/${{ env.REPO }}:latest
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
@@ -42,4 +43,6 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
+      - name: Push image to GHCR
+        run: docker push ghcr.io/${{ env.REPO }}:latest
 
