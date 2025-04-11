@@ -8,6 +8,7 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/cli-docker-build.yml'
 
+// AI! Can you add in the trivy docker scan here
 jobs:
   build-cli-docker-head:
     # Only run this job on pushes to main or master branch
