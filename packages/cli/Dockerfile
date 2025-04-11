@@ -12,7 +12,7 @@ RUN pnpm -r run build
 RUN pnpm deploy --filter=@typescript-cli-template/cli /prod/cli
 
 FROM base AS cli
-LABEL org.opencontainers.image.source https://github.com/PeteFromGlasgow/typescript-cli-template
+LABEL org.opencontainers.image.source=https://github.com/PeteFromGlasgow/typescript-cli-template
 WORKDIR /app
 
 # Copy necessary files from the builder stage
