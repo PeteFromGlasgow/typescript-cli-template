@@ -1,7 +1,10 @@
 name: Docker Build
 
-// AI! Change this so that it will only run if files in package.json or packages/cli change
-on: [push]
+on:
+  push:
+    paths:
+      - 'package.json'
+      - 'packages/cli/**'
 
 jobs:
   build-cli-docker-head:
