@@ -36,5 +36,5 @@ jobs:
         cache: 'pnpm'
     - run: pnpm -r install
     - run: cd packages/browser && pnpm exec playwright install ${{ matrix.browser }}
-    - run: cd packages/browser && vitest --run --browser=${{ matrix.browser }}
+    - run: cd packages/browser && pnpm exec vitest --run --browser=${{ matrix.browser }}
 
