@@ -5,7 +5,6 @@ on:
     paths:
       - 'package.json'
       - 'packages/cli/**'
-      - 'eslint.config.js'
       - '.github/workflows/cli-docker-build.yml'
 
 jobs:
