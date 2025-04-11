@@ -6,10 +6,9 @@ on:
       - 'package.json'
       - 'packages/cli/**'
       - 'eslint.config.js'
-
+// AI! Can you add the ability to push to the Github Container Registry to this job
 jobs:
   build-cli-docker-head:
-    # Only run this job on pushes to main or master branch
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
