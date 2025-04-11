@@ -8,6 +8,8 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/cli-docker-build.yml'
 
+// AI! Another error for this one, the uppercase letters are in the repository_owner field: 'The workflow is not valid. .github/workflows/cli-docker-build.yml (Line: 33, Col: 17): Unexpected symbol: ','. Located at position 29 within expression: github.event.repository.name,,'
+
 jobs:
   build-cli-docker-head:
     # Only run this job on pushes to main or master branch
