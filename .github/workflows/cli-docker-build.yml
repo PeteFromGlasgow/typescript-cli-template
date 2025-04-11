@@ -8,7 +8,6 @@ on:
       - 'eslint.config.js'
       - '.github/workflows/cli-docker-build.yml'
 
-// AI! I get the following error for this one, can you help me fix it: 'Error: buildx failed with: ERROR: invalid tag "ghcr.io/PeteFromGlasgow/typescript-cli-template:latest": repository name must be lowercase'
 jobs:
   build-cli-docker-head:
     # Only run this job on pushes to main or master branch
@@ -31,5 +30,5 @@ jobs:
           context: .
           file: packages/cli/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
 
