@@ -6,7 +6,6 @@ on:
       - 'package.json'
       - 'packages/cli/**'
       - '.github/workflows/cli-docker-build.yml'
-  push:
     tags:
       - 'v*.*.*'
 
