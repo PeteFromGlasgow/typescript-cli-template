@@ -1,6 +1,6 @@
 {
   "name": "@typescript-cli-template/core",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "type": "module",
@@ -11,6 +11,7 @@
     "coverage": "vitest --run --coverage"
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",
+  "repository": "https://github.com/PeteFromGlasgow/typescript-cli-template.git",
   "license": "ISC",
   "description": "Core typescript-cli-template library",
   "publishConfig": {
