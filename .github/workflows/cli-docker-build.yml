@@ -7,6 +7,8 @@ on:
       - 'packages/cli/**'
       - '.github/workflows/cli-docker-build.yml'
 
+// AI! Add a second job to this file which works on a tag on master, it should push versions in the formats "MAJOR", "MAJOR.MINOR" and "MAJOR.MINOR.PATCH" given a semver "vMAJOR.MINOR.PATCH" tag and if the tag has any additional information it should only push that tag
+
 jobs:
   build-cli-docker-head:
     # Only run this job on pushes to main or master branch
