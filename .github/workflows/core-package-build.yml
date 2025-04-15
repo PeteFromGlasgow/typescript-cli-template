@@ -4,7 +4,6 @@ on:
   push:
     tags:
       - 'v*.*.*'
-// AI! I need to replace the code here which uses a sed replace and make it use pnpm changesets instead
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
