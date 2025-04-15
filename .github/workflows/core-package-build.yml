@@ -22,11 +22,6 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Update package.json version
-        run: |
-          VERSION=${GITHUB_REF_NAME#v}
-          sed -i "s/\"version\": \"0.0.0-development\"/\"version\": \"$VERSION\"/" packages/core/package.json
-          echo "Updated packages/core/package.json to version $VERSION"
       - name: Build package
         run: pnpm --filter @PeteFromGlasgow/typescript-cli-template-core build
       - name: Publish package
