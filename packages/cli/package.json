@@ -13,7 +13,7 @@
     "ts-cli": "dist/cli.js"
   },
   "dependencies": {
-    "@typescript-cli-template/core": "workspace:*",
+    "@PeteFromGlasgow/typescript-cli-template-core": "workspace:*",
     "commander": "^13.1.0"
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",

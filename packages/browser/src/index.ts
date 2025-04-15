@@ -1,4 +1,4 @@
-import { getHelloWorld } from '@typescript-cli-template/core'
+import { getHelloWorld } from '@PeteFromGlasgow/typescript-cli-template-core'
 
 export function bindField(fieldId: string, targetId: string) {
   const field = document.getElementById(fieldId)
