@@ -1,5 +1,5 @@
 name: Core Package Build & Publish
-
+//AI! I need this file to run on the main branch and use changesets - it should ideally release all packages
 on:
   push:
     tags:
