@@ -1,5 +1,5 @@
 import { Command } from 'commander'
-import { getHelloWorld } from '@typescript-cli-template/core'
+import { getHelloWorld } from '@PeteFromGlasgow/typescript-cli-template-core'
 
 async function getProgram(output: (out: unknown) => void) {
   const program = new Command()
