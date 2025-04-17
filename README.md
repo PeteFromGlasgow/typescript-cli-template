@@ -13,6 +13,7 @@ This is a powerful, multi package Typescript project base which has examples for
 *   🐳 **Docker Support:** Dockerfile provided for building the CLI application (`packages/cli/Dockerfile`).
 *   훅 **Git Hooks:** Pre-commit hooks configured using Husky to ensure code quality before commits.
 *   ⚙️ **Editor Configuration:** Includes a `.editorconfig` file for consistent editor settings.
+*   ✨ **Automated Versioning & Changelogs:** Uses Changesets for streamlined package versioning and changelog generation.
 *   🚀 **CI/CD:** GitHub Actions workflows for automated testing, building, and releasing.
 
 ## Usage
