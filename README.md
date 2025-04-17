@@ -16,6 +16,7 @@ This is a powerful, multi package Typescript project base which has examples for
 *   ✨ **Automated Versioning & Changelogs:** Uses Changesets for streamlined package versioning and changelog generation.
 *   🚀 **CI/CD:** GitHub Actions workflows for automated testing, building, and releasing.
 *   🛡️ **Vulnerability Scanning:** Uses Trivy to scan the CLI Docker image for vulnerabilities in CI.
+*   🔒 **Security Policy:** Includes a `SECURITY.md` file outlining how to report vulnerabilities.
 
 ## Usage
 
