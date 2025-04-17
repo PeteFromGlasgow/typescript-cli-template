@@ -4,13 +4,16 @@ This is a powerful, multi package Typescript project base which has examples for
 
 ## Features
 
-* Node Library, CLI and Browser script examples
-* Unit testing with examples
-* Linting & Style (using ESLint & Stylistic)
-* Docker Build for CLI application
-* Git pre-commit hooks using husky
-* Nice default `.editorconfig`
-* Github CI scripts for testing
+*   📦 **Multi-package Monorepo:** Uses `pnpm` workspaces to manage `core` library, `cli`, and `browser` packages.
+*   📚 **Core Library Example:** Demonstrates a reusable TypeScript library (`packages/core`).
+*   💻 **CLI Application Example:** Includes a command-line interface built with TypeScript (`packages/cli`).
+*   🌐 **Browser Script Example:** Shows how to bundle TypeScript for use in a web browser (`packages/browser`).
+*   🧪 **Unit Testing:** Integrated unit testing setup with examples using Vitest across all packages.
+*   💅 **Linting & Style:** Consistent code style enforced by ESLint & Stylistic.
+*   🐳 **Docker Support:** Dockerfile provided for building the CLI application (`packages/cli/Dockerfile`).
+*   훅 **Git Hooks:** Pre-commit hooks configured using Husky to ensure code quality before commits.
+*   ⚙️ **Editor Configuration:** Includes a `.editorconfig` file for consistent editor settings.
+*   🚀 **CI/CD:** GitHub Actions workflows for automated testing, building, and releasing.
 
 ## Usage
 
