@@ -18,6 +18,9 @@
   },
   "author": "Peter Kinnaird <peter@kinnaird.scot>",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "packageManager": "pnpm@10.6.4",
   "devDependencies": {
     "@vitest/coverage-v8": "3.1.1",
