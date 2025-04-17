@@ -15,8 +15,9 @@ This is a powerful, multi package Typescript project base which has examples for
 *   ⚙️ **Editor Configuration:** Includes a `.editorconfig` file for consistent editor settings.
 *   ✨ **Automated Versioning & Changelogs:** Uses Changesets for streamlined package versioning and changelog generation.
 *   🚀 **CI/CD:** GitHub Actions workflows for automated testing, building, and releasing.
-*   🛡️ **Vulnerability Scanning:** Uses Trivy to scan the CLI Docker image for vulnerabilities in CI.
+*   🛡️ **Vulnerability Scanning:** Uses Trivy in CI to scan project dependencies (`pnpm-lock.yaml`) and the CLI Docker image for known vulnerabilities.
 *   🔒 **Security Policy:** Includes a `SECURITY.md` file outlining how to report vulnerabilities.
+*   🤝 **Code of Conduct:** Includes a `CODE_OF_CONDUCT.md` to foster an inclusive community.
 
 ## Usage
 

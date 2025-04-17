@@ -49,7 +49,8 @@ jobs:
         node-version: "22"
         cache: 'pnpm'
     - run: pnpm -r install
-    - name: Run Trivy vulnerability scanner in repo mode
+    - name: Run Trivy vulnerability scanner for filesystem dependencies
+      # Scans the entire filesystem, including pnpm-lock.yaml, for library vulnerabilities
       uses: aquasecurity/trivy-action@master
       with:
         scan-type: 'fs'
