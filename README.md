@@ -9,7 +9,8 @@ This is a powerful, multi package Typescript project base which has examples for
 * Linting & Style (using ESLint & Stylistic)
 * Docker Build for CLI application
 * Git pre-commit hooks using husky
-*
+* Nice default `.editorconfig`
+* Github CI scripts for testing
 
 ## Usage
 
@@ -19,7 +20,7 @@ This project uses `pnpm` to support multiple packages in the same repository.
 
 ```bash
 # Enable Corepack
-corepack Enable
+corepack enable
 
 # Install all packages recursively
 pnpm install -r
