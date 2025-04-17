@@ -30,3 +30,63 @@ corepack enable
 pnpm install -r
 ```
 
+### Building
+
+To build all packages (`core`, `cli`, `browser`):
+
+```bash
+pnpm build
+```
+
+This command runs the `build` script defined in the `package.json` of each individual package.
+
+### Testing
+
+There are separate commands for running tests:
+
+*   **Run tests for `core` and `cli` packages:**
+
+    ```bash
+    pnpm test
+    ```
+
+*   **Run tests specifically for the `browser` package:**
+
+    ```bash
+    pnpm test:browser
+    ```
+
+### Linting
+
+To check the code style across all packages:
+
+```bash
+pnpm lint
+```
+
+To automatically fix linting issues:
+
+```bash
+pnpm lint:fix
+```
+
+### Versioning & Releasing (using Changesets)
+
+This project uses [Changesets](https://github.com/changesets/changesets) to manage versioning and generate changelogs.
+
+1.  **Add a changeset:** When you make a change that should trigger a package release, run:
+
+    ```bash
+    pnpm changeset
+    ```
+    Follow the prompts to specify which packages are affected and the type of change (patch, minor, major).
+
+2.  **Create a release pull request:** The `changeset-bot` (if configured in CI) or a manual run of `pnpm changeset version` will consume the changeset files and update package versions and changelogs.
+
+3.  **Publish packages:** After merging the release PR, you can publish the updated packages:
+
+    ```bash
+    pnpm release
+    ```
+    This script typically runs `pnpm build` first, then publishes the packages using `pnpm publish -r`. *Note: The `--no-git-checks` flag is used here, be mindful of your release workflow.*
+
