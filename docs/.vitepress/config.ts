@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Typescript CLI Base Documentation",
-  description: "Documentation base for Typescript CLI",
+  title: 'Typescript CLI Base Documentation',
+  description: 'Documentation base for Typescript CLI',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
