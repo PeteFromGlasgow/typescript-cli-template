@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/typescript-cli-example/', // Set the base path for deployment
   title: 'Typescript CLI Base Documentation',
   description: 'Documentation base for Typescript CLI',
   themeConfig: {
